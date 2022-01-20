@@ -1,0 +1,44 @@
+button:focus,button:active:focus,button.active:focus {
+  outline: none !important;
+}
+button{
+  color: #FFF;
+  letter-spacing: 2px;
+  border: 2px solid #FFF;
+  background: rgba(0, 0, 0, 0);
+}
+.input-field{
+  height: 0;
+  display: none;
+  margin: auto;
+  text-align: center;
+}
+.login-block{
+  background-color: #000000de;
+  height: fit-content;
+  border-radius: 20px;
+  animation:  1s linear 0s showUp;
+}
+@keyframes showUp {
+  from{
+    opacity: 0;
+    top:0;
+  }
+  to{
+    opacity: 1;
+    top: 50%;
+  }
+}
+.welcome{
+  font-family: "Hurry";
+  font-weight: bold;
+  letter-spacing: 7px;
+}
+// mobile
+@media screen and (max-width: 480px){
+
+}
+
+@media screen and (max-width: 960px ){
+
+}

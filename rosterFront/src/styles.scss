@@ -1,0 +1,37 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/scss/bootstrap";
+html, body { height: 100%; cursor: url('assets/img/pointer.png'), auto }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.separator{
+  height: 50px;
+}
+@font-face {
+  font-family: 'FFXIV';
+  src: url('./assets/fonts/FFXIV/OPTIEngeEtienne.woff') format('woff'),
+  url('./assets/fonts/FFXIV/OPTIEngeEtienne.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Hurry';
+  src: url('./assets/fonts/FFXIV/HurryUp-Regular.woff') format('woff'),
+  url('./assets/fonts/FFXIV/HurryUp-Regular.woff2') format('woff2');
+}
+// mobile
+@media screen and (max-width: 480px){
+  .hide-mobile{
+    display: none!important;
+  }
+  h2{
+    font-size: 1.5rem;
+  }
+  h3{
+    font-size: 1.4rem;
+  }
+  .separator{
+    height: 150px;
+  }
+}
+
+@media screen and (max-width: 960px ){
+
+}

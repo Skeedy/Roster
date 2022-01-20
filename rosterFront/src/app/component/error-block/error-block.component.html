@@ -1,0 +1,10 @@
+<div [@errorShow] *ngIf="errorServ.error.isError" class="dialog text-center d-sm-flex align-items-center">
+  <div>
+    <img class="friendly-moogle" src="assets/img/moogle.png">
+  </div>
+  <div>
+    <h5 style="color: #FFF">{{errorServ.error.html}}</h5>
+    <h5 *ngIf="errorServ.error.subhtml" style="color: #FFF">{{errorServ.error.subhtml}}</h5>
+  </div>
+</div>
+<div *ngIf="errorServ.error.isError" class="overlay" (click)="errorServ.validateError()"></div>

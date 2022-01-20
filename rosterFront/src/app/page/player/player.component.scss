@@ -1,0 +1,24 @@
+
+.no-character{
+  display: flex;
+  background-color: #00000096;
+  color: #FFF;
+  border-radius: 20px;
+}
+.no-character img{
+  height: 150px;
+}
+// mobile
+@media screen and (max-width: 480px){
+
+  .no-character{
+
+  }
+  .no-character img{
+    height: 100px;
+  }
+}
+
+@media screen and (max-width: 960px ){
+
+}

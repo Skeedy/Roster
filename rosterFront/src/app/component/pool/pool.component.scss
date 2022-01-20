@@ -1,0 +1,66 @@
+.dialog {
+  z-index: 1000;
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #222;
+  box-shadow: 0 7px 8px -4px rgba(0, 0, 0, 0.2), 0 13px 19px 2px rgba(0, 0, 0, 0.14), 0 5px 24px 4px rgba(0, 0, 0, 0.12);
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+.coffer-img{
+  width: 85px;
+}
+.active{
+  padding: 5px;
+  background-color: #3be438;
+}
+.selected{
+  padding: 5px;
+  background-color: #3689a8;
+}
+.player-img{
+  height: 75px;
+}
+.role-img{
+  height: 75px;
+  width: 75px;
+}
+.weap-icon{
+  height: 75px;
+  width: 75px;
+}
+// mobile
+@media screen and (max-width: 480px){
+  .dialog {
+    width: 95%;
+  }
+  .coffer-img{
+    height: 50px;
+    width: 50px;
+  }
+  .player-img{
+    height: 40px
+  }
+  .role-img{
+    height: 35px;
+    width: 35px;
+  }
+  .weap-icon{
+    height: 35px;
+    width: 35px;
+  }
+}
+
+@media screen and (max-width: 960px ){
+
+}

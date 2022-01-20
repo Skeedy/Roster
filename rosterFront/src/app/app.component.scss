@@ -1,0 +1,99 @@
+@import "~bootstrap/dist/css/bootstrap.min.css";
+
+mat-drawer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: #e8eef6;
+}
+
+
+mat-drawer-content button.menu{
+  position: absolute;
+  top: 50px;
+  left: 10px;
+  background: #d8d8d8;
+  color: #872a22;
+  box-shadow: none!important;
+
+}
+mat-drawer-content div.logout{
+  background-color: #872222!important;
+  border-radius: 50px;
+  position: absolute;
+  top: 50px;
+  right: 10px;
+  color: #fff;
+}
+
+
+mat-drawer-content button:focus, mat-drawer-content button:active:focus, mat-drawer-content button.active:focus {
+  outline: none !important;
+}
+
+.mat-icon {
+  font-size: 35px;
+  height: unset!important;
+  width: unset!important;
+}
+mat-drawer{
+  padding: 35px;
+}
+.crystal-background{
+  background-color: black;
+  background-image: url("../assets/img/bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+mat-drawer{
+  background: linear-gradient(to left, #272727, #525252);
+  color: white;
+  font-family: FFXIV;
+  font-size: 30px;
+}
+mat-drawer ul li{
+  list-style: none;
+}
+.font{
+  font-family: FFXIV;
+}
+.active{
+  color: #ef9532!important;
+}
+ul{
+  padding: 0;
+}
+ul li a{
+  color: #FFF;
+  text-decoration: underline;
+}
+.menu-img{
+  width: 60px;
+  height: 60px;
+  padding: 5px;
+}
+@media screen and (max-width: 480px){
+  .crystal-background{
+    background-color: black;
+    background-image: url("../assets/img/bg_mobile.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+  }
+  .menu-img{
+    width: 45px;
+    height: 45px;
+  }
+}
+.header{
+  height: fit-content;
+  border-bottom: 2px groove #000;
+}
+@media screen and (max-width: 960px ){
+
+}

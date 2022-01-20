@@ -1,0 +1,58 @@
+<mat-drawer-container class="example-container" [hasBackdrop]="true">
+  <mat-drawer #drawer>
+    <ul>
+      <li>
+        <a class="mb-1" (click)="drawer.toggle()" routerLink="/roster" routerLinkActive="active">
+          <img class="menu-img mr-2" src="assets/img/instance.png" >Instances
+        </a>
+      </li>
+      <li>
+        <a class="mb-1" (click)="drawer.toggle()" routerLink="/player" routerLinkActive="active">
+          <img class="menu-img  mr-2" src="assets/img/pld.png" >Players
+        </a>
+      </li>
+      <li>
+        <a class="mb-1" (click)="drawer.toggle()" routerLink="/item" routerLinkActive="active">
+          <img class="menu-img  mr-2" src="assets/img/item.png" >Items
+        </a>
+      </li>
+      <li>
+        <a class="mb-1" (click)="drawer.toggle()" routerLink="/history" routerLinkActive="active">
+          <img class="menu-img  mr-2" src="assets/img/Title.png" >History
+        </a>
+      </li>
+      <li>
+        <a class="mb-1" (click)="drawer.toggle()" routerLink="/edit-roster" routerLinkActive="active">
+          <img class="menu-img  mr-2" src="assets/img/maintenance.png" >Edit roster
+        </a>
+      </li>
+    </ul>
+  </mat-drawer>
+
+  <mat-drawer-content>
+    <div *ngIf="isConnected()">
+      <button class="menu" mat-raised-button (click)="drawer.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+    </div>
+    <div *ngIf="isConnected()" class="logout">
+      <button mat-button (click)="logout()">
+        <mat-icon style="">account_box</mat-icon>
+        <span class="ml-2">Log out</span>
+      </button>
+    </div>
+    <div class="container-fluid crystal-background">
+      <div class="mt-3 hide-mobile text-center header" style="height:150px">
+        <img src="../assets/img/logoFF.png">
+      </div>
+      <div class="separator"></div>
+      <router-outlet></router-outlet>
+    </div>
+  </mat-drawer-content>
+
+</mat-drawer-container>
+<app-error-block></app-error-block>
+<app-success-block></app-success-block>
+<app-loading-box></app-loading-box>
+
+

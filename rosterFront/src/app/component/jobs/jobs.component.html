@@ -1,0 +1,55 @@
+<div [@jobs] *ngIf="jobList" class="dialog">
+  <h3 class="text-center text-white"> {{player.name}}'s
+    <span *ngIf="!isSub">main job</span>
+    <span *ngIf="isSub">sub job</span>
+  </h3>
+  <div class="d-flex">
+    <div class="mr-2">
+      <h5 class="text-center text-white mt-2 mb-0">Tanks</h5>
+      <div class="d-flex justify-content-center">
+        <div *ngFor="let job of jobServ._jobSub.value | tankJobs">
+          <div>
+            <img class="pointer job-img" matTooltip="{{job.name}}" [ngClass]="{'disabledDiv': !checkJob(job.id)}" height="50px"
+                 (click)="patchJob(isSub, job, player.id)" src="{{job.imgUrl}}">
+          </div>
+        </div>
+      </div>
+      <h5 class="text-center text-white mt-2 mb-0">Healers</h5>
+      <div class="d-flex justify-content-center">
+        <div *ngFor="let job of jobServ._jobSub.value | healerJobs">
+          <img class="pointer job-img" matTooltip="{{job.name}}" [ngClass]="{'disabledDiv': !checkJob(job.id)}" height="50px"
+                (click)="patchJob(isSub, job, player.id)" src="{{job.imgUrl}}">
+        </div>
+      </div>
+    </div>
+    <div class="ml-2">
+      <h5 class="text-center text-white mt-2 mb-0">Melee DPS</h5>
+      <div class="d-flex justify-content-center">
+        <div *ngFor="let job of jobServ._jobSub.value | meleedps">
+          <img class="pointer job-img" matTooltip="{{job.name}}" [ngClass]="{'disabledDiv': !checkJob(job.id)}" height="50px"
+               (click)="patchJob(isSub, job, player.id)" src="{{job.imgUrl}}">
+        </div>
+      </div>
+      <h5 class="text-center text-white mt-2 mb-0">Ranged DPS</h5>
+      <div class="d-flex justify-content-center">
+        <div *ngFor="let job of jobServ._jobSub.value | rangeddps">
+          <img class="pointer job-img" matTooltip="{{job.name}}" [ngClass]="{'disabledDiv': !checkJob(job.id)}" height="50px"
+               (click)="patchJob(isSub, job, player.id)" src="{{job.imgUrl}}">
+        </div>
+      </div>
+      <h5 class="text-center text-white mt-2 mb-0">Magic DPS</h5>
+      <div class="d-flex justify-content-center">
+        <div *ngFor="let job of jobServ._jobSub.value | magicdps">
+          <img class="pointer job-img" matTooltip="{{job.name}}" [ngClass]="{'disabledDiv': !checkJob(job.id)}" height="50px"
+               (click)="patchJob(isSub, job, player.id)" src="{{job.imgUrl}}">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="isSub! && ddbId">
+    <button mat-raised-button class="btn-danger" (click)="delete()">Delete</button>
+  </div>
+</div>
+<div *ngIf="jobList" class="overlay" (click)="close()"></div>
+

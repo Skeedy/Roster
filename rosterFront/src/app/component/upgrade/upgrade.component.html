@@ -1,0 +1,18 @@
+<div class="justify-content-center d-flex my-1 my-sm-2">
+  <img class="pointer mr-3" class="loot-img"
+       (click)="showSetUpgrade= !showSetUpgrade;"
+       src="{{item.imgUrl}}"
+       matTooltip="{{item.name}}">
+  <div *ngIf="!lootSlot">
+    <h5 style="color:#FFF;display: flex;align-items: center;margin: 5px;"> Augment item</h5>
+  </div>
+  <div *ngIf="lootSlot">
+    <img class="loot-img" src="{{lootSlot.player_url}}" matTooltip="{{lootSlot.player_name}}">
+  </div>
+</div>
+<app-set-upgrade [valueRaid]= raid.value
+                 [item]="item"
+                 [(setUpgrade)]="showSetUpgrade"
+                 [lootSlot] = lootSlot>
+</app-set-upgrade>
+

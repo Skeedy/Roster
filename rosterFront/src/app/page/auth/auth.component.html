@@ -1,0 +1,22 @@
+<div style="color: #fff;" class="row justify-content-center">
+  <div class="login-block col-10 col-lg-5 p-2"
+       [ngClass]="{'m-auto' : cookieServ.check('is_first_time')}">
+    <h2 class="welcome text-center"> Welcome to FFXIV Roster </h2>
+    <div class=" d-flex justify-content-around">
+      <button  (click)="toggleLogIn(); registerOpen? toggleRegister(): ''" mat-raised-button>Sign in</button >
+      <button  (click)="toggleRegister(); logIsOpen? toggleLogIn(): ''" mat-raised-button>Create</button>
+    </div>
+    <div>
+      <app-login [@logOpenClose]="logIsOpen ? 'open' : 'closed'" class="p-3 input-field "></app-login>
+      <app-new-roster [@registerOpenClose]="registerOpen ? 'open' : 'closed'" class="p-3 input-field "></app-new-roster>
+    </div>
+  </div>
+  <app-welcome class="col-10 offset-lg-1 col-lg-5"
+               *ngIf="(!cookieServ.check('is_first_time') && isVisible)"
+               (onCloseClick)="isVisible = false"
+  >
+  </app-welcome>
+</div>
+
+
+

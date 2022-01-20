@@ -1,0 +1,5 @@
+<ng-template #formBlock class="test"></ng-template>
+  <app-add-player *ngIf=" rosterServ._rosterSub.value.player.length < 8"></app-add-player>
+  <button *ngIf="searchServ.playerList.playersIds.length === 1"
+          mat-button style="background-color: #3adb76;" class="my-1 text-center text-white" (click)="submitPlayers()">Save character{{searchServ.playerList.playersIds.length > 1? 's' : ''}}</button>
+

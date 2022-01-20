@@ -1,0 +1,23 @@
+.active{
+  background-color: #3be438;
+}
+.selected{
+  background-color: #3689a8;
+}
+.disabled{
+  background-color: red;
+  pointer-events: none;
+}
+.jobImg{
+  height: 45px;
+}
+.noNeed{
+  opacity: 0.3;
+  pointer-events: none;
+}
+@media screen and (max-width: 480px){
+  .jobImg{
+    height: 33px;
+    width: 33px;
+  }
+}
